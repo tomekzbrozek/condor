@@ -1,1 +1,22 @@
 language: python
+python:
+  - "3.6"      # current default Python on Travis CI
+# command to install dependencies
+before_install:
+  # upgrade pip
+  - pip install -U pip
+  - pip install -r requirements.txt
+  # installing and configuring dbt
+  - pip install dbt==0.13.1
+
+install:
+
+script:
+  dbt test
+
+deploy:
+  skip_cleanup: true
+  provider: script
+  script:
+  on:
+    branch: master
