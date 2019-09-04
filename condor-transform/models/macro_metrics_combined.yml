@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: macro_metrics_combined
+
+    columns:
+        - name: date
+          tests:
+              - unique
+              - not_null
