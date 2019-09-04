@@ -8,4 +8,5 @@ install:
   - pip install dbt==0.13.1	
 
 script:	
-  cd condor transform && dbt test	
+  cd condor-transform
+  dbt test	
