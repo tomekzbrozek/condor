@@ -1,0 +1,22 @@
+condor-bigquery:
+  target: prod
+  outputs:
+    prod:
+      type: bigquery
+      method: service-account-json
+      project: "{{ env_var('PROJECT_ID') }}"
+      dataset: macroeconomic
+      location: US
+      threads: 1
+      timeout_seconds: 300
+      keyfile_json:
+        type: "{{ env_var('TYPE') }}"
+        project_id: "{{ env_var('PROJECT_ID') }}"
+        private_key_id: "{{ env_var('PRIVATE_KEY_ID') }}"
+        private_key: "{{ env_var('PRIVATE_KEY') }}"
+        client_email: "{{ env_var('CLIENT_EMAIL') }}"
+        client_id: "{{ env_var('CLIENT_ID') }}"
+        auth_uri: "{{ env_var('AUTH_URI') }}"
+        token_uri: "{{ env_var('TOKEN_URI') }}"
+        auth_provider_x509_cert_url: "{{ env_var('AUTH_PROVIDER_X509_CERT_URL') }}"
+        client_x509_cert_url: "{{ env_var('CLIENT_X509_CERT_URL') }}"
