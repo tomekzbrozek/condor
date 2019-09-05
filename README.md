@@ -1,3 +1,5 @@
+# condor [![Build Status](https://travis-ci.org/tomekzbrozek/condor.svg?branch=master)](https://travis-ci.org/tomekzbrozek/condor)
+
 The goal of _Condor_ project is to get a bird's-eye view on macroeconomic situation.
 
 ![](https://github.com/tomekzbrozek/condor/blob/master/theme-picture.jpg)
